@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Banner */
+.hero {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Título Principal (MAIOR) */
+.titulo-principal {
+    color: #820427;
+    font-size: 48px; /* Aumentado */
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Container dos Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+    .card-item {
+    display: flex;
+    align-items: center;
+    min-height: 250px; /* Aumente este valor para o card ficar mais alto */
+    margin-bottom: 30px; /* Espaço entre um card e outro */
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+
+/* O Card */
+.card-item {
+    background: white;
+    border-radius: 15px;
+    display: flex; /* Lado a lado */
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 150px; /* Garante que todos os cards tenham o mesmo tamanho */
+}
+
+/* Imagem Quadrada */
+.card-image {
+    width: 200px; /* Largura fixa */
+    height: 200px; /* Altura fixa igual à largura */
+    object-fit: cover;
+    flex-shrink: 0; /* Não deixa a imagem esmagar */
+}
+    .card-image-wrapper {
+    width: 300px; /* Aumente para o tamanho desejado da foto */
+    height: 300px; /* Mantenha igual à largura para ser quadrada */
+    max-width: none; /* Remova a limitação de 50px que está no seu código */
+    flex-shrink: 0;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
+}
+
+
+/* Área da Legenda (MENOR) */
+.card-content {
+    padding: 20px; /* Reduzido o espaço da legenda */
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Título Rosa (MENOR) */
+.card-title {
+    font-size: 18px; /* Diminuído */
+    color: #820427;
+    margin-bottom: 5px;
+}
+
+.card-caption {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.secao-lateral {
+    display: flex; /* Faz a mágica de colocar um ao lado do outro */
+    align-items: center; /* Centraliza o texto verticalmente com a imagem */
+    justify-content: center; /* Centraliza a seção na tela */
+    gap: 50px; /* Espaço entre a foto e o texto */
+    max-width: 1000px;
+    margin: 60px auto; /* Centraliza o bloco e dá espaço dos cards acima */
+    padding: 20px;
+}
+
+.foto-lado {
+    flex: 1; /* Faz a foto ocupar metade do espaço */
+    max-width: 400px; /* Limita o tamanho da foto */
+}
+
+.foto-lado img {
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra leve */
+}
+
+.texto-lado {
+    flex: 1; /* Faz o texto ocupar a outra metade */
+}
+
+.texto-lado h2 {
+    color: #820427; /* Cor que você está usando */
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.texto-lado p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* Container da Seção */
+.secao-video {
+    max-width: 1000px;
+    margin: 60px auto; /* Espaço em relação ao que está em cima */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título da seção de vídeo */
+.titulo-video {
+    color: #820427; /* Mantendo seu padrão rosa/roxo */
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Container que mantém a proporção do vídeo (16:9) */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Limita a largura máxima para não ficar gigante */
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #000; /* Fundo preto enquanto carrega */
+}
+
+/* Container da Seção */
+.secao-video {
+    max-width: 1000px;
+    margin: 60px auto; /* Espaço em relação ao que está em cima */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título da seção de vídeo */
+.titulo-video {
+    color: #820427; /* Mantendo seu padrão rosa/roxo */
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Container que mantém a proporção do vídeo (16:9) */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Limita a largura máxima para não ficar gigante */
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #000; /* Fundo preto enquanto carrega */
+}
+
+/* Container da seção */
+.secao-video-grande {
+    width: 100%;
+    max-width: 1200px; /* Aumentei para os cards ficarem alinhados com o vídeo */
+    margin: 80px auto; /* Mais espaço no topo e embaixo */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-video {
+    color: #820427;
+    font-size: 38px; /* Título maior para combinar com o vídeo */
+    margin-bottom: 40px;
+}
+
+/* Onde a mágica acontece para o tamanho */
+.video-wrapper-grande {
+    width: 100%; 
+    max-width: 1000px; /* Aqui você controla o tamanho máximo da tela do vídeo */
+    margin: 0 auto;
+    border-radius: 25px; /* Bordas bem arredondadas para um visual moderno */
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15); /* Sombra mais forte para dar destaque */
+    background-color: #000;
+}
+
+.video-wrapper-grande video {
+    width: 100%; /* Faz o vídeo preencher todo o espaço do wrapper */
+    display: block;
+    max-height: 80vh; /* Limita a altura a 80% da tela para não precisar rolar muito */
+}
